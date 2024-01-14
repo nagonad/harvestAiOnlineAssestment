@@ -6,7 +6,10 @@ npm install
 
 After installing the dependencies, you can run the application using the following command:
 
+```node
 npm run dev
+```
+
 Once the application is running, navigate to the home page. You will find two buttons, one for the Bar Chart and another for the Weather Forecast Chart.
 
 Bar Chart
