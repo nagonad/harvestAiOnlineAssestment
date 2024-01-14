@@ -9,21 +9,35 @@ export const createNumbersArrayForLeftBar = (data: number[]) => {
   let leftBarIndexes=[];
 
   let maxValue = data.reduce((p, v) => (p < v ? v : p));
- 
-  let integerNumber = Math.floor(maxValue);
 
-  let digits = integerNumber.toString().length;
-  let ending = ["", "0", "00", "k", "0k", "00k", "m", "0m", "00m", "b"];
+  //digits of the number
+  let digit = Math.floor(Math.log10(maxValue))
 
-  maxValue = maxValue / Math.pow(10, digits - 1);
+  //maximum value of the chart
+  let nextIntervalLimit=Math.ceil(maxValue/Math.pow(10,digit))
 
-  for (let i = 0; i < maxValue; i++) {
-    if(i===0){
-      leftBarIndexes.push(0)
-      continue
+
+  //adjusting maximum value
+  while(true){
+    if(nextIntervalLimit%4===0){
+      break
     }
-    leftBarIndexes.push(i + ending[digits - 1]);
+    nextIntervalLimit++
   }
-  console.log(data)
-  return leftBarIndexes.reverse();
+
+  // more soft value for maximum
+  nextIntervalLimit = nextIntervalLimit * Math.pow(10,digit)
+
+
+  //getting the half of the maximum value of the chart if it's way too big compared the maximum value of array
+  while(maxValue<=nextIntervalLimit/2){
+    nextIntervalLimit = nextIntervalLimit/2
+  }
+
+  //creating the values for vertical axis
+ for(let i =0;i<=nextIntervalLimit;i=i+nextIntervalLimit/4){
+  leftBarIndexes.push(i)
+ }
+
+ return leftBarIndexes.reverse()
 };
