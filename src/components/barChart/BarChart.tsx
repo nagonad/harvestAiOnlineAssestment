@@ -28,7 +28,7 @@ export const BarChart = () => {
             }}
             className="bg-cyan-700 py-2 px-4 rounded-md text-white hover:bg-cyan-700/75"
           >
-            Generate Chart
+            Generate Chartt
           </button>
         </div>
       )}
