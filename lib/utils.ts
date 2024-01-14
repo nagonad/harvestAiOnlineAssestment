@@ -9,6 +9,7 @@ export const createNumbersArrayForLeftBar = (data: number[]) => {
   let leftBarIndexes=[];
 
   let maxValue = data.reduce((p, v) => (p < v ? v : p));
+ 
   let integerNumber = Math.floor(maxValue);
 
   let digits = integerNumber.toString().length;

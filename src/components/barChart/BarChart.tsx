@@ -21,14 +21,14 @@ export const BarChart = () => {
           </div>
         </div>
       ) : (
-        <div className="flex h-screen items-center justify-evenly">
+        <div className="flex h-screen items-center justify-center">
           <button
             onClick={() => {
               setDisplayChart(true);
             }}
             className="bg-cyan-700 py-2 px-4 rounded-md text-white hover:bg-cyan-700/75"
           >
-            Generate Chartt
+            Generate Chart
           </button>
         </div>
       )}

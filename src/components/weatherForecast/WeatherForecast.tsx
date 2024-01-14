@@ -6,6 +6,7 @@ import { useWeatherForecast } from "../../../hooks/useWeatherForecast";
 export const WeatherForecast = () => {
   const { weatherForecastData } = useWeatherForecast();
 
+  //value calculation for Highchart options
   const avgValues = useMemo(() => {
     let arr = weatherForecastData?.forecast.forecastday.map(
       (day) => day.day.avgtemp_c
@@ -14,6 +15,7 @@ export const WeatherForecast = () => {
     return arr;
   }, [weatherForecastData]);
 
+  //value calculation for Highchart options
   const maxValues = useMemo(() => {
     let arr = weatherForecastData?.forecast.forecastday.map(
       (day) => day.day.maxtemp_c
@@ -22,6 +24,7 @@ export const WeatherForecast = () => {
     return arr;
   }, [weatherForecastData]);
 
+  //value calculation for Highchart options
   const minValues = useMemo(() => {
     let arr = weatherForecastData?.forecast.forecastday.map(
       (day) => day.day.mintemp_c
@@ -30,6 +33,7 @@ export const WeatherForecast = () => {
     return arr;
   }, [weatherForecastData]);
 
+  //value calculation for Highchart options
   const dateRange = useMemo(() => {
     let arr = weatherForecastData?.forecast.forecastday.map((day) => {
       let newDate = new Date(day.date_epoch * 1000);
@@ -39,6 +43,7 @@ export const WeatherForecast = () => {
     return arr;
   }, [weatherForecastData]);
 
+  //highchart options
   const options = {
     chart: {
       type: "line",
