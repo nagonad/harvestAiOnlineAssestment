@@ -1,6 +1,9 @@
 This project is a simple web application that allows users to view two different charts - a Bar Chart and a Weather Forecast Chart. The Bar Chart is designed using HTML and CSS, showcasing the developer's skills. The Weather Forecast Chart utilizes the Highcharts package, and a custom hook fetches data for a seamless user experience. To simplify the setup, the API key is hardcoded, eliminating the need for users to provide their own.
 
+```node
 npm install
+```
+
 After installing the dependencies, you can run the application using the following command:
 
 npm run dev
