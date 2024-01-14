@@ -14,6 +14,9 @@ export const useWeatherForecast =() => {
 
   useEffect(() => {
     if (currentLocation) {
+
+      //fetch function to get data, api key is hardcoded for better experience
+      //1 week of data will be shown
       fetch(
         `https://api.weatherapi.com/v1/forecast.json?key=6a02bba4e751482fa4b211802241301&q=${currentLocation.coords.latitude},${currentLocation.coords.longitude}&days=7`
       )
@@ -91,7 +94,7 @@ type WeatherData = {
     time: string;
     temp_c: number;
     temp_f: number;
-    is_day: 0 | 1; // Assuming is_day can only be 0 or 1
+    is_day: 0 | 1; 
     condition: {
         text: string;
         icon: string;
@@ -134,8 +137,8 @@ type Astro = {
     moonset: string;
     moon_phase: string;
     moon_illumination: number;
-    is_moon_up: 0 | 1; // Assuming is_moon_up can only be 0 or 1
-    is_sun_up: 0 | 1;  // Assuming is_sun_up can only be 0 or 1
+    is_moon_up: 0 | 1; 
+    is_sun_up: 0 | 1;  
 };
 
 type Day = {

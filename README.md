@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
+This project is a simple web application that allows users to view two different charts - a Bar Chart and a Weather Forecast Chart. The Bar Chart is designed using HTML and CSS, showcasing the developer's skills. The Weather Forecast Chart utilizes the Highcharts package, and a custom hook fetches data for a seamless user experience. To simplify the setup, the API key is hardcoded, eliminating the need for users to provide their own.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+npm install
+After installing the dependencies, you can run the application using the following command:
 
-Currently, two official plugins are available:
+npm run dev
+Once the application is running, navigate to the home page. You will find two buttons, one for the Bar Chart and another for the Weather Forecast Chart.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Bar Chart
+Click the "Bar Chart" button to view the custom-designed Bar Chart. Please note that while the chart may not be pixel-perfect, it serves as a demonstration of the developer's skills.
 
-## Expanding the ESLint configuration
+Weather Forecast Chart
+Click the "Weather Forecast Chart" button to view the Weather Forecast Chart. The chart utilizes the Highcharts package, and the data is fetched using a custom hook. The API key is hardcoded for a better user experience, eliminating the need for users to provide their own API key.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Notes
+The Bar Chart is designed using HTML and CSS, showcasing the developer's skills.
+The Weather Forecast Chart uses the Highcharts package, and a custom hook fetches the data.
+The API key for the Weather Forecast Chart is hardcoded for user convenience.
+Feel free to explore the charts and enjoy the simplicity of the application!
