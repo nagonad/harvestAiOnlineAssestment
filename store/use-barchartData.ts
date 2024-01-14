@@ -6,7 +6,11 @@ interface BarchartStore {
 
 };
 
+
+//generatig random values between 1-10 for barchart
 const randomArrayGenerator = (size:number) => {
+
+  
     let randomNumbersArray=[];
     for(let i=0;i<size;i++){
         randomNumbersArray.push(Math.floor(Math.random()*9+1))
